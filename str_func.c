@@ -21,3 +21,46 @@ int _strcmp(char *strcmp1, char *strcmp2)
 	return (strcmp1[i] - strcmp2[i]);
 }
 
+/**
+ * _put - writes a string to standard output
+ * @str: string
+ *
+ * Return: no of chars or -1 on failure
+ *
+ */
+
+ssize_t _puts(char *str)
+{
+	ssize_t index, length;
+	
+	index= _strlen(str);
+	length = write(1, str, index);
+
+	if (len != num)
+	{
+		perror("Error");
+		return (-1);
+	}
+	return (length);
+}
+
+
+/**
+ * _strlen - returns length of a string
+ * @str: string to be measured
+ * Return: length of string
+ */
+
+unsigned int _strlen(char *str)
+{
+	unsigned int i = 0;
+
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+/**
+ * _atoi

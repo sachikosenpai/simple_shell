@@ -40,12 +40,21 @@ typedef struct variable
 
 typedef struct builtin
 {
-	char *nam;
-	void (*f)(vars_t *);
+	char *name;
+	void (*f)(var_t *);
 } builtin_t;
 
 int _strcmp(char *strcmp1, char *strcmp2);
+unsigned int _strlen(char *str); 
 
 void (*check_for_builtin(var_t *vars))(var_t *var);
+
 void new_exit(var_t *var);
-void _env(var_T *var);
+void _env(var_t *var);
+void create_env(var_t *var);
+
+char *convert_int(unsigned int num);
+void _print_string(char *str);
+ssize_t _puts(char *str);
+
+#endif

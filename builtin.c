@@ -41,9 +41,9 @@ void new_exit(var_t *var)
 		if (stat == -1)
 		{
 			var->stat = 2;
-			print_error(var, ": illegal Number: ");
-			_puts2(var->av[1]);
-			_puts2("\n");
+			print_msg_error(var, ": illegal Number: ");
+			_print_string(var->av[1]);
+			_print_string("\n");
 			free(var->command);
 			var->command = NULL;
 			return;
@@ -68,7 +68,7 @@ void _env(var_t *var)
 
 	for (i = 0; var->env[i]; i++)
 	{
-		_puts(vars->env[i]);
+		_puts(var->env[i]);
 		_puts("\n");
 	}
 	var->stat = 0;
@@ -89,7 +89,7 @@ void create_env(var_t *var)
 
 	if (var->av[1] == NULL || var->av[2] == NULL)
 	{
-		print_error(var, ": Incorrect number of arguments\n");
+		print_msg_error(var, ": Incorrect number of arguments\n");
 		var->stat = 2;
 		return;
 	}
@@ -113,3 +113,4 @@ void create_env(var_t *var)
 	}
 	var->stat = 0;
 }
+
