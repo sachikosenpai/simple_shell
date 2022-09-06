@@ -1,14 +1,14 @@
 #include "shell.h"
 
 /**
- * print_msg_error - print error message 
+ * print_error - print error message
  * @var: pointer to the struct variable
  * @message: message to print
  *
  * Return: void
  */
 
-void print_msg_error(var_t *var, char *message)
+void print_error(var_t *var, char *message)
 {
 	char *count;
 
@@ -29,7 +29,7 @@ void print_msg_error(var_t *var, char *message)
 }
 
 /**
- * _print_String - pring string to stderr
+ * _print_string - pring string to stderr
  * @str: string to print
  *
  * Return:v\ void
@@ -78,4 +78,3 @@ char *convert_int(unsigned int num)
 	}
 	return (numstr);
 }
-	
