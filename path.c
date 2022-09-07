@@ -186,3 +186,4 @@ int check_dir(char *str)
 	}
 	return (0);
 }
+
