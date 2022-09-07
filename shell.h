@@ -45,7 +45,7 @@ typedef struct builtin
 } builtin_t;
 
 int _strcmp(char *strcmp1, char *strcmp2);
-unsigned int _strlen(char *str); 
+unsigned int _strlen(char *str);
 char *new_strtok(char *str, const char *delimiter);
 char **_realloc(char **ptr, size_t *size);
 char *_strdup(char *str);
