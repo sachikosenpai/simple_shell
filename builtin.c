@@ -163,3 +163,4 @@ void rem_env(var_t *var)
 	var->env = newenv;
 	var->stat = 0;
 }
+
