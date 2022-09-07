@@ -53,12 +53,12 @@ ssize_t _puts(char *str)
 
 unsigned int _strlen(char *str)
 {
-	unsigned int i = 0;
+	unsigned int i;
 
-	while (str[i] != '\0')
-	{
-		i++;
-	}
+	i = 0;
+
+	for (i = 0; str[i]; i++)
+		;
 	return (i);
 }
 
